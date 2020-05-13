@@ -21,6 +21,12 @@ def sort_path(am,n,f,s,iv):
                     else:
                         if(s[i]>s[iv]+1):
                             s[i]=s[iv]+1
+                    f[i] = -1
+                else:
+                    if s[i]+1<s[iv]:
+                       s[iv]=s[i]+1
+                       iv-=2
+                        
         f[iv]=-1
         sort_path(am,n,f,s,iv+1)
     else:
